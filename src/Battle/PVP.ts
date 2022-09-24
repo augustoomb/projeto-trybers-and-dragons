@@ -13,7 +13,10 @@ export default class PVP extends Battle {
   fight(): number {
     while (this._chara1.lifePoints !== -1 && this._chara2.lifePoints !== -1) {
       this._chara1.attack(this._chara2);
+      // console.log(this._chara2.lifePoints);
       this._chara2.attack(this._chara1);
+      // console.log(this._chara1.lifePoints);
+      // console.log('------');
     }
     
     // return this._chara1.lifePoints === -1 ? -1 : 1;
@@ -21,3 +24,7 @@ export default class PVP extends Battle {
     return result;
   }
 }
+
+// const pvp = new PVP();
+
+// pvp.fight();
